@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(Placeholder.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#basic {
+    width: 400px;
+    height: 400px;
+    background-image: url(Placeholder.jpeg);
+    background-size: fill;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s;
+}
+
+#basic:active {
+    transform: scale(0.95);
+}
+
+.info {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#achievements {
+    margin-top: 20px;
+    max-width: 400px;
+    text-align: center;
+    display: none;
+}
+
+.achievement {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    animation: pop 0.5s ease;
+}
+
+#shop {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-image: url('Placeholder.jpeg');
+    color: rgb(0, 0, 0);
+}
+
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#toggle-music {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    z-index: 100;
+}
+
+#buyBooster {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.special-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: yellow;
+    font-family: 'Pacifico', cursive;
+    animation: specialPop 2s ease-out forwards;
+    z-index: 200;
+}
+
+@keyframes specialPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
